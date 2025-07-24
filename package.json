@@ -1,14 +1,16 @@
 {
   "name": "aqua-sort",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration production --output-path dist/aqua-sort",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postbuild": "if [ -d 'dist/aqua-sort' ]; then cp dist/aqua-sort/index.html dist/aqua-sort/404.html; else echo 'ERROR: Build failed - dist/aqua-sort not found'; exit 1; fi",
+    "render-build": "npm ci && npm run build"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^20.1.2",
     "@angular/cdk": "^20.1.3",
@@ -38,10 +40,5 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.2"
-  },
-  "scripts": {
-  "build": "ng build --configuration production --output-path dist/aqua-sort",
-  "postbuild": "if [ -d 'dist/aqua-sort' ]; then cp dist/aqua-sort/index.html dist/aqua-sort/404.html; else echo 'ERROR: Build failed - dist/aqua-sort not found'; exit 1; fi",
-  "render-build": "npm ci && npm run build"
-}
+  }
 }
