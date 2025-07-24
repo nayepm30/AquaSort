@@ -1,0 +1,118 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo-brand">
+      <img src="/assets/images/logo.png" alt="Logo AquaSort" height="40" />
+      <span class="brand-name">AquaSort</span>
+    </div>
+    <nav class="nav-menu">
+      <a routerLink="/sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+      <a routerLink="/contacto" class="nav-link">Contáctanos</a>
+      <a routerLink="/login" class="nav-link ">Iniciar Sesión</a>
+      <a routerLink="/registro" class="nav-link register-btn">Regístrarse</a>
+    </nav>
+  </div>
+</header>
+
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="title animate__animated animate__fadeInDown">Transformando la Gestión del Agua</h1>
+    <p class="subtitle animate__animated animate__fadeIn animate__delay-1s">Tecnología innovadora para recolectar y clasificar agua de manera inteligente</p>
+    <button routerLink="/demo" class="cta-button animate__animated animate__fadeInUp animate__delay-2s">
+      Solicitar Demo
+    </button>
+  </div>
+  <div class="water-animation"></div>
+</section>
+
+<section class="features">
+  <div class="feature-card" *ngFor="let feature of features" data-aos="fade-up" data-aos-delay="150">
+    <div class="icon-wrapper">
+      <mat-icon>{{ feature.icon }}</mat-icon>
+    </div>
+    <h3>{{ feature.title }}</h3>
+    <p>{{ feature.description }}</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <div class="logo-brand">
+        <img src="/assets/images/logo.png" alt="Logo AquaSort" height="40" />
+        <span class="brand-name">AquaSort</span>
+      </div>
+      <p class="footer-slogan">Innovación en la gestión sostenible del agua</p>
+      <div class="social-links">
+        <a href="#" class="social-icon" aria-label="Facebook">
+          <mat-icon>facebook</mat-icon>
+        </a>
+        <a href="#" class="social-icon" aria-label="Twitter">
+          <mat-icon>twitter</mat-icon>
+        </a>
+        <a href="#" class="social-icon" aria-label="LinkedIn">
+          <mat-icon>linkedin</mat-icon>
+        </a>
+        <a href="#" class="social-icon" aria-label="Instagram">
+          <mat-icon>instagram</mat-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <div class="links-column">
+        <h3 class="links-title">Producto</h3>
+        <ul>
+          <li><a routerLink="/caracteristicas">Características</a></li>
+          <li><a routerLink="/precios">Planes y precios</a></li>
+          <li><a routerLink="/demo">Solicitar demo</a></li>
+          <li><a routerLink="/integraciones">Integraciones</a></li>
+        </ul>
+      </div>
+
+      <div class="links-column">
+        <h3 class="links-title">Empresa</h3>
+        <ul>
+          <li><a routerLink="/sobre-nosotros">Sobre nosotros</a></li>
+          <li><a routerLink="/equipo">Nuestro equipo</a></li>
+          <li><a routerLink="/blog">Blog</a></li>
+          <li><a routerLink="/trabajos">Trabaja con nosotros</a></li>
+        </ul>
+      </div>
+
+      <div class="links-column">
+        <h3 class="links-title">Recursos</h3>
+        <ul>
+          <li><a routerLink="/documentacion">Documentación</a></li>
+          <li><a routerLink="/faq">Preguntas frecuentes</a></li>
+          <li><a routerLink="/soporte">Soporte técnico</a></li>
+          <li><a routerLink="/contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <h3 class="newsletter-title">Suscríbete a nuestro boletín</h3>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Tu correo electrónico" required>
+        <button type="submit">Suscribirse</button>
+      </form>
+      <p class="newsletter-text">Recibe las últimas noticias y actualizaciones</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <p>&copy; 2023 AquaSort. Todos los derechos reservados.</p>
+      <div class="legal-links">
+        <a routerLink="/privacidad">Política de privacidad</a>
+        <a routerLink="/terminos">Términos de servicio</a>
+        <a routerLink="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>

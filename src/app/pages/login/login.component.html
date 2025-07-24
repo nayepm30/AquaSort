@@ -1,0 +1,75 @@
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-header">
+      <img src="/assets/images/logo.png" alt="Logo" class="auth-logo">
+      <h1 class="auth-title">Inicia Sesión</h1>
+      <p class="auth-subtitle">Accede a tu cuenta para gestionar tu sistema de agua</p>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="auth-form">
+      <div class="input-field">
+        <mat-icon class="input-icon">person_outline</mat-icon>
+        <input 
+          id="username" 
+          type="text" 
+          formControlName="username" 
+          placeholder="Usuario" 
+          required
+        >
+      </div>
+
+      <div class="input-field">
+        <mat-icon class="input-icon">lock_outline</mat-icon>
+        <input 
+          id="password" 
+          type="password" 
+          formControlName="password" 
+          placeholder="Contraseña" 
+          required
+        >
+        <button type="button" class="toggle-password">
+          <mat-icon>visibility_off</mat-icon>
+        </button>
+      </div>
+
+      <div class="auth-actions">
+        <button 
+          type="submit" 
+          class="auth-button"
+          [disabled]="loginForm.invalid"
+          [class.loading]="loading"
+        >
+          <span *ngIf="!loading">Ingresar</span>
+          <mat-spinner *ngIf="loading" diameter="24"></mat-spinner>
+        </button>
+      </div>
+
+      <div class="auth-footer">
+        <a routerLink="/recuperar" class="auth-link">¿Olvidaste tu contraseña?</a>
+        <p class="auth-text">
+          ¿No tienes cuenta? 
+          <a routerLink="/registro" class="auth-link">Regístrate aquí</a>
+        </p>
+      </div>
+    </form>
+
+    <div class="auth-social">
+      <p class="divider">o ingresa con</p>
+      <div class="social-buttons">
+        <button type="button" class="social-button">
+          <img src="/assets/images/google-icon.svg" alt="Google">
+        </button>
+        <button type="button" class="social-button">
+          <img src="/assets/images/microsoft-icon.svg" alt="Microsoft">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-background">
+    <div class="water-effect"></div>
+  </div>
+</div>
