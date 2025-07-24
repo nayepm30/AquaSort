@@ -13,48 +13,52 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/aqua-sort",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
               "src/custom-theme.scss",
-              "src/styles.css",
-              "node_modules/aos/dist/aos.css"
+              "src/styles.css"
             ],
-"scripts": [
-  "node_modules/aos/dist/aos.js"
-]
+            "scripts": [],
+            "optimization": true,
+            "aot": true,
+            "vendorChunk": false
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "700kB",
-                  "maximumError": "2MB"
+                  "maximumWarning": "2MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "50kB",
-                  "maximumError": "200kB"
+                  "maximumWarning": "100kB",
+                  "maximumError": "300kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "buildOptimizer": true,
+              "sourceMap": false,
+              "namedChunks": false
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "vendorChunk": true
             }
           },
           "defaultConfiguration": "production"
@@ -77,21 +81,17 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
+            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
-            "styles": [
-              "src/styles.css",
-              "node_modules/aos/dist/aos.css"
-            ]
+            "styles": ["src/styles.css"],
+            "scripts": []
           }
         }
       }

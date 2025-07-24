@@ -45,7 +45,7 @@
   "build": "ng build --configuration=production --output-path=dist/aqua-sort",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
-  "postbuild": "cp dist/AquaSort/index.html dist/AquaSort/404.html",  
-  "render-build": "npm ci && npm run build"
+  "postbuild": "cp dist/aqua-sort/index.html dist/aqua-sort/404.html", 
+  "render-build": "npm install && npm run build"
  }
 }
