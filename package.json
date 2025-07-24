@@ -38,5 +38,9 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.2"
-  }
+  },
+  "scripts": {
+  "postbuild": "cp dist/AquaSort/index.html dist/AquaSort/404.html",
+  "render-build": "npm install && npm run build -- --configuration=production"
+}
 }
