@@ -1,23 +1,23 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component'; // Asegúrate de que la ruta de importación sea correcta
+import { Layout } from './layout/layout.component';
+import { Home } from './pages/home/home.component';
 import { Login } from './pages/login/login.component';
+import { Registro } from './pages/registro/registro.component';
 
 export const routes: Routes = [
-  { 
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
   {
-    path: 'home',
-    component: HomeComponent
+    path: '',
+    component: Layout,
+    children: [
+      { path: 'home', component: Home},
+      
+      { path: 'login', component: Login },
+
+      {path: 'registro', component: Registro},
+      
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ]
   },
-  { 
-    path: 'login',
-    component: Login
-  },
-  { 
-    path: '**',
-    redirectTo: 'home' 
-  }
+  // Ruta para páginas no encontradas, opcional
+  { path: '**', redirectTo: 'home' }
 ];

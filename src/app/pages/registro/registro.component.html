@@ -27,30 +27,28 @@
       </form>
     </div>
 
-    <div class="form-box register">
+     <div class="form-box register">
       <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
         <h1>Registro</h1>
         <br>
+        <div class="input-box">
+          <input type="text" placeholder="Nombre" formControlName="name" required />
+          <i class="bx bxs-user"></i>
+        </div>
         <div class="input-box">
           <input type="text" placeholder="Usuario" formControlName="username" required />
           <i class="bx bxs-user"></i>
         </div>
         <div class="input-box">
-          <input type="email" placeholder="Email" formControlName="email" required />
-          <i class="bx bxs-envelope"></i>
-        </div>
-        <div class="input-box">
           <input type="password" placeholder="Contraseña" formControlName="password" required />
           <i class="bx bxs-lock-alt"></i>
         </div>
-        <button class="btn" type="submit">Registrate</button>
-        <p>o regístrate con redes sociales</p>
-        <div class="social-icons">
-          <a href="#"><i class="bx bxl-google"></i></a>
-          <a href="#"><i class="bx bxl-facebook"></i></a>
-          <a href="#"><i class="bx bxl-github"></i></a>
-          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <div class="input-box">
+          <input type="password" placeholder="Confirmar contraseña" formControlName="confirmPassword" required />
+          <i class="bx bxs-lock-alt"></i>
         </div>
+        <button class="btn" type="submit">Registrate</button>
+        
       </form>
     </div>
 
@@ -62,7 +60,7 @@
         <button class="btn register-btn" (click)="toggleRegister()">Registrate</button>
       </div>
       <div class="toggle-panel toggle-right">
-        <h1>Bienvenido de vuelta!</h1>
+        <h1>Bienvenido </h1>
         <br>
         <p>Ya tienes una cuenta?</p>
         <button class="btn login-btn" (click)="toggleLogin()">Iniciar sesión</button>

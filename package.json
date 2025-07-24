@@ -40,8 +40,8 @@
     "typescript": "~5.8.2"
   },
   "scripts": {
-  "build": "ng build --configuration=production",
-  "postbuild": "cp dist/aqua-sort/index.html dist/aqua-sort/404.html",
+  "build": "ng build --configuration production --output-path dist/aqua-sort",
+  "postbuild": "if [ -d 'dist/aqua-sort' ]; then cp dist/aqua-sort/index.html dist/aqua-sort/404.html; else echo 'ERROR: Build failed - dist/aqua-sort not found'; exit 1; fi",
   "render-build": "npm ci && npm run build"
 }
 }
