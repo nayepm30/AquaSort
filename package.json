@@ -40,7 +40,12 @@
     "typescript": "~5.8.2"
   },
   "scripts": {
-  "postbuild": "cp dist/AquaSort/index.html dist/AquaSort/404.html",
-  "render-build": "npm install && npm run build -- --configuration=production"
-}
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build --configuration=production --output-path=dist/aqua-sort",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "postbuild": "cp dist/AquaSort/index.html dist/AquaSort/404.html",  
+  "render-build": "npm ci && npm run build"
+ }
 }
