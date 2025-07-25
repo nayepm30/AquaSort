@@ -1,80 +1,159 @@
-.producto-section {
-  padding: 6rem 2rem 2rem;
-  background-color: #f0fbfd;
-  font-family: 'Segoe UI', sans-serif;
+/* Hero */
+.producto-hero {
+  background: linear-gradient(120deg, #006577, #0095a8);
+  color: white;
+  padding: 6rem 2rem 4rem;
 }
 
-.container {
+.hero-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   max-width: 1100px;
   margin: auto;
 }
 
-h1 {
-  text-align: center;
-  color: #006577;
-  font-size: 2.8rem;
-  margin-bottom: 2rem;
-}
-
-.producto-descripcion {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.producto-texto {
+.hero-content .text {
   flex: 1;
   min-width: 300px;
 }
 
-.producto-texto h2 {
-  color: #004e5f;
-  font-size: 2rem;
+.hero-content .text h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.producto-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #333;
+.hero-content .subtitulo {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
 }
 
-.producto-texto ul {
-  list-style: none;
-  padding: 0;
-}
-
-.producto-texto li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.btn-comprar {
-  display: inline-block;
-  margin-top: 1.5rem;
+.btn-principal {
+  background: white;
+  color: #006577;
   padding: 0.8rem 1.8rem;
-  background-color: #006577;
-  color: white;
   font-weight: bold;
-  border-radius: 30px;
+  border-radius: 40px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
-.btn-comprar:hover {
-  background-color: #004e5f;
+.btn-principal:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
 }
 
-.producto-imagen {
-  flex: 1;
-  min-width: 280px;
+.hero-content .image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Beneficios */
+.producto-beneficios {
+  background: #f8fafa;
+  padding: 1rem 2rem;
+}
+
+.producto-beneficios h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #006577;
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0, 101, 119, 0.1);
   text-align: center;
 }
 
-.producto-imagen img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 101, 119, 0.2);
+.benefit i {
+  font-size: 2rem;
+  color: #006577;
+  margin-bottom: 1rem;
+}
+
+/* Estadísticas */
+.producto-estadisticas {
+  background: #fff;
+  padding: 4rem 2rem;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2.5rem;
+  color: #006577;
+}
+
+.stat p {
+  font-size: 1.1rem;
+}
+
+/* CTA */
+.cta-final {
+  background: #006577;
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  min-height: 120px;
+}
+
+.cta-final h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-final p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-final .btn-principal {
+  background-color: white;
+  color: #006577;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  transition: all 0.3s;
+}
+
+.cta-final .btn-principal:hover {
+  background-color: #e6e6e6;
+}
+
+.cta-button {
+    background: white;
+    color: #006577;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 }

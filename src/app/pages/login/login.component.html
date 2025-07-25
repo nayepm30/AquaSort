@@ -1,7 +1,9 @@
 <!-- Contenedor principal del formulario -->
-<main class="main-content">
+<main class="main-content fade-in">
   <div class="container" [class.active]="isRegistering">
-    <div class="form-box login">
+    
+    <!-- Login -->
+    <div class="form-box login slide-in-left">
       <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
         <h1>Iniciar Sesión</h1>
         
@@ -14,7 +16,7 @@
           <i class="bx bxs-lock-alt"></i>
         </div>
         <div class="forgot-link">
-          <a href="#">Olvidaste tu contraseña?</a>
+          <a href="#">¿Olvidaste tu contraseña?</a>
         </div>
         <button class="btn" type="submit">Iniciar Sesión</button>
         <p>o inicia sesión con redes sociales</p>
@@ -27,7 +29,8 @@
       </form>
     </div>
 
-    <div class="form-box register">
+    <!-- Registro -->
+    <div class="form-box register slide-in-right">
       <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
         <h1>Registro</h1>
        
@@ -43,7 +46,7 @@
           <input type="password" placeholder="Contraseña" formControlName="password" required />
           <i class="bx bxs-lock-alt"></i>
         </div>
-        <button class="btn" type="submit">Registrate</button>
+        <button class="btn" type="submit">Regístrate</button>
         <p>o regístrate con redes sociales</p>
         <div class="social-icons">
           <a href="#"><i class="bx bxl-google"></i></a>
@@ -54,19 +57,19 @@
       </form>
     </div>
 
+    <!-- Panel de cambio -->
     <div class="toggle-box">
-      <div class="toggle-panel toggle-left">
-        <h1>Hola, Bienvenido!</h1>
-        
-        <p>No tienes cuenta?</p>
-        <button class="btn register-btn" (click)="toggleRegister()">Registrate</button>
+      <div class="toggle-panel toggle-left fade-in-delayed">
+        <h1>¡Hola, bienvenido!</h1>
+        <p>¿No tienes cuenta?</p>
+        <button class="btn register-btn" (click)="toggleRegister()">Regístrate</button>
       </div>
-      <div class="toggle-panel toggle-right">
-        <h1>Bienvenido de vuelta!</h1>
-       
-        <p>Ya tienes una cuenta?</p>
+      <div class="toggle-panel toggle-right fade-in-delayed">
+        <h1>¡Bienvenido de vuelta!</h1>
+        <p>¿Ya tienes una cuenta?</p>
         <button class="btn login-btn" (click)="toggleLogin()">Iniciar sesión</button>
       </div>
     </div>
+    
   </div>
 </main>

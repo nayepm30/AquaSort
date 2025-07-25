@@ -1,30 +1,86 @@
-<section class="producto-section">
+<!-- Sección principal del producto -->
+<section class="producto-hero" data-aos="fade-up">
+  <div class="hero-content">
+    <div class="text" data-aos="fade-right" data-aos-duration="1000">
+      <h1><i class="fas fa-water"></i> AquaSort</h1>
+      <p class="subtitulo">
+        Tecnología inteligente para garantizar agua limpia, sostenible y controlada en tiempo real.
+      </p>
+      <button routerLink="/producto" class="cta-button animate__animated animate__fadeInUp animate__delay-2s">
+      Comprarlo
+    </button>
+    </div>
+    <div class="image" data-aos="fade-left" data-aos-duration="1000">
+      <img src="/assets/images/aquasort-demo.png" alt="AquaSort demo">
+    </div>
+  </div>
+</section>
+
+<!-- Beneficios del producto -->
+<section class="producto-beneficios" data-aos="fade-up">
   <div class="container">
-    <h1>Conoce AquaSort</h1>
-
-    <div class="producto-descripcion">
-      <div class="producto-texto">
-        <h2>¿Qué es AquaSort?</h2>
-        <p>
-          <strong>AquaSort</strong> es un sistema inteligente diseñado para monitorear y clasificar el pH del agua en tiempo real. 
-          Con sensores de alta precisión y un algoritmo de análisis automático, AquaSort garantiza agua más limpia, reduce los costos de tratamiento y protege el medio ambiente.
-        </p>
-
-        <h3>Beneficios clave:</h3>
-        <ul>
-          <li>✅ Clasificación automática de agua por pH</li>
-          <li>✅ Interfaz amigable y monitoreo en tiempo real</li>
-          <li>✅ Ideal para plantas, zonas industriales y agrícolas</li>
-          <li>✅ Reducción de costos de tratamiento</li>
-          <li>✅ Conectividad desde tu dispositivo móvil</li>
-        </ul>
-
-        <a routerLink="/contacto" class="btn-comprar">Contáctanos para adquirirlo</a>
+    <h2><i class="fas fa-star"></i> ¿Por qué elegir AquaSort?</h2>
+    <div class="benefits-grid">
+      <div class="benefit" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-vial"></i>
+        <h3>Medición precisa</h3>
+        <p>Sensor de pH de alta precisión que evalúa el agua en tiempo real.</p>
       </div>
-
-      <div class="producto-imagen">
-        <img src="/assets/images/aquasort-demo.png" alt="Imagen de AquaSort">
+      <div class="benefit" data-aos="zoom-in" data-aos-delay="200">
+        <i class="fas fa-sync-alt"></i>
+        <h3>Clasificación automática</h3>
+        <p>El sistema desvía el flujo según el valor de pH detectado.</p>
+      </div>
+      <div class="benefit" data-aos="zoom-in" data-aos-delay="300">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Monitoreo remoto</h3>
+        <p>Visualiza datos desde tu móvil o PC mediante una interfaz intuitiva.</p>
+      </div>
+      <div class="benefit" data-aos="zoom-in" data-aos-delay="400">
+        <i class="fas fa-leaf"></i>
+        <h3>Impacto ambiental</h3>
+        <p>Reduce los contaminantes, protege ecosistemas y mejora la salud pública.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Estadísticas destacadas -->
+<section class="producto-estadisticas">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <i class="fas fa-percentage"></i>
+        <h3>+90%</h3>
+        <p>precisión en las mediciones</p>
+      </div>
+      <div class="stat">
+        <i class="fas fa-clock"></i>
+        <h3>30 días</h3>
+        <p>de funcionamiento continuo validado</p>
+      </div>
+      <div class="stat">
+        <i class="fas fa-industry"></i>
+        <h3>3</h3>
+        <p>entornos reales de prueba</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Llamado a la acción final (SIN animación AOS) -->
+<section class="cta-final">
+  <div class="container">
+    <h2><i class="fas fa-bullhorn"></i> ¿Listo para transformar la gestión del agua?</h2>
+    <p>
+      Contáctanos y lleva AquaSort a tu industria o planta.
+    </p>
+    <br>
+    <a routerLink="/contacto" class="btn-principal grande">
+      <i class="fas fa-shopping-cart"></i> Quiero AquaSort
+    </a>
   </div>
 </section>

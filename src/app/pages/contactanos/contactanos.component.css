@@ -1,0 +1,148 @@
+.contacto {
+  padding: 6rem 2rem;
+  background: #f5fcfc;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contacto .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contacto h1 {
+  font-size: 2.8rem;
+  color: #006577;
+  margin-bottom: 1rem;
+}
+
+.contacto .intro {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  color: #444;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.form-box, .info-box {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 101, 119, 0.1);
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #0095a8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 149, 168, 0.2);
+}
+
+.btn {
+  background: #006577;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #0095a8;
+  transform: scale(1.03);
+}
+
+.info-box h2 {
+  margin-bottom: 1rem;
+  color: #006577;
+}
+
+.info-box p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #333;
+}
+
+.social {
+  margin-top: 1rem;
+}
+
+.social a {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  color: #006577;
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: #0095a8;
+}
+
+/* Animaciones */
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+.slide-in-top {
+  animation: slideTop 1s ease forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.slide-in-left {
+  animation: slideLeft 1s ease forwards;
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideRight 1s ease forwards;
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+@keyframes slideTop {
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes slideLeft {
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes slideRight {
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
