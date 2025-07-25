@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "serve -s dist/aqua-sort --single",
     "build": "ng build --configuration production --output-path dist/aqua-sort",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
