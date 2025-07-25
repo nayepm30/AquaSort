@@ -4,6 +4,7 @@ import { Home } from './pages/home/home.component';
 import { Login } from './pages/login/login.component';
 import { Registro } from './pages/registro/registro.component';
 import { sobreNosotros } from './pages/sobreNosotros/sobreNosotros.component';
+import { Producto } from './pages/producto/producto.component';
 
 export const routes: Routes = [
   {
@@ -17,10 +18,12 @@ export const routes: Routes = [
       {path: 'registro', component: Registro},
 
       {path: 'sobreNosotros', component: sobreNosotros},
+
+      {path: 'producto', component: Producto},
       
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },
-  // Ruta para páginas no encontradas, opcional
+  
   { path: '**', redirectTo: 'home' }
 ];

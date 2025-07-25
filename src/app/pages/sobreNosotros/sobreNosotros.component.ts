@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'sobreNosotros',
-  standalone: true, // Agrega esto si estás usando componentes standalone
   imports: [],
   templateUrl: './sobreNosotros.component.html',
   styleUrls: ['./sobreNosotros.component.css'] // Corregido (plural)
