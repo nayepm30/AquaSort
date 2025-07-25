@@ -1,0 +1,37 @@
+.about-us {
+  padding: 6rem 2rem 2rem;
+  background-color: #f5fcfc;
+  font-family: 'Segoe UI', sans-serif;
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #006577;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+
+      h2 {
+        color: #004e5f;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+
+      p, li {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      ul {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+}

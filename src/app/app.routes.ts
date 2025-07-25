@@ -3,6 +3,7 @@ import { Layout } from './layout/layout.component';
 import { Home } from './pages/home/home.component';
 import { Login } from './pages/login/login.component';
 import { Registro } from './pages/registro/registro.component';
+import { sobreNosotros } from './pages/sobreNosotros/sobreNosotros.component';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,8 @@ export const routes: Routes = [
       { path: 'login', component: Login },
 
       {path: 'registro', component: Registro},
+
+      {path: 'sobreNosotros', component: sobreNosotros},
       
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
