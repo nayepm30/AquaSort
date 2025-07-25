@@ -12,21 +12,14 @@ export const routes: Routes = [
     path: '',
     component: Layout,
     children: [
-      { path: 'home', component: Home},
-      
+      { path: '', redirectTo: 'home', pathMatch: 'full' },  // ✅ redirección inicial
+      { path: 'home', component: Home },
       { path: 'login', component: Login },
-
-      {path: 'registro', component: Registro},
-
-      {path: 'sobreNosotros', component: sobreNosotros},
-
-      {path: 'producto', component: Producto},
-
-      {path: 'contactanos', component: Contactanos },
-      
-      { path: '', redirectTo: 'home', pathMatch: 'full' }
+      { path: 'registro', component: Registro },
+      { path: 'sobreNosotros', component: sobreNosotros },
+      { path: 'producto', component: Producto },
+      { path: 'contactanos', component: Contactanos }
     ]
   },
-  
-  { path: '**', redirectTo: 'home' }
+  { path: '**', redirectTo: 'home' }  // rutas no válidas
 ];
