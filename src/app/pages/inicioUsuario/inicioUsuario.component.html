@@ -1,0 +1,64 @@
+<div class="dashboard-layout" [class.sidebar-collapsed]="isSidebarCollapsed">
+  <!-- Sidebar izquierdo -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="/assets/images/logo.png" alt="Logo AquaSort" height="40">
+      <span>AquaSort</span>
+    </div>
+    <nav class="sidebar-menu">
+      <a routerLink="/home" routerLinkActive="active"><i class="fas fa-home"></i> Inicio</a>
+      
+      <!-- Menú desplegable para Producto -->
+      <div class="menu-item-with-submenu">
+        <div class="menu-header" (click)="toggleProductSubmenu()">
+          <i class="fas fa-box"></i>
+          <span>Mi Producto</span>
+          <i class="fas fa-angle-down submenu-icon" [class.rotated]="isProductSubmenuOpen"></i>
+        </div>
+        <div class="submenu" [class.open]="isProductSubmenuOpen">
+          <a routerLink="/producto/lista" routerLinkActive="active">Configuración</a>
+          <a routerLink="/producto/agregar" routerLinkActive="active">Ajustes</a>
+          <a routerLink="/producto/categorias" routerLinkActive="active">Categorías</a>
+        </div>
+      </div>
+  
+      <!-- Menú desplegable para Mis Compras -->
+      <div class="menu-item-with-submenu">
+        <div class="menu-header" (click)="togglePurchasesSubmenu()">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Mis Compras</span>
+          <i class="fas fa-angle-down submenu-icon" [class.rotated]="isPurchasesSubmenuOpen"></i>
+        </div>
+        <div class="submenu" [class.open]="isPurchasesSubmenuOpen">
+          <a routerLink="/compras/historial" routerLinkActive="active">Historial</a>
+          <a routerLink="/compras/pendientes" routerLinkActive="active">Pendientes</a>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar-footer">
+      <a routerLink="/perfil" routerLinkActive="active"><i class="fas fa-user"></i> Mi Perfil</a>
+      <button (click)="cerrarSesion()" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <!-- Contenido principal con header -->
+  <div class="main-content">
+    <header class="header-logged">
+      <!-- Botón hamburguesa con animación -->
+      <button class="toggle-sidebar-btn" (click)="toggleSidebar()">
+        <i class="fas fa-bars" [class.rotated]="isSidebarCollapsed"></i>
+      </button>
+      
+      <!-- Logo y nombre centrado -->
+      <div class="header-brand-center">
+        <img src="/assets/images/logo.png" alt="Logo AquaSort" height="30">
+        <span>AquaSort</span>
+      </div>
+      
+      <!-- Espacio para balancear el diseño (opcional) -->
+      <div class="header-spacer"></div>
+    </header>
+
+    
+  </div>
+</div>
