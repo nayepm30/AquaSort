@@ -1,0 +1,125 @@
+<header class="header">
+  <div class="header-container">
+    <div class="logo-brand">
+      <img src="/assets/images/logo.png" alt="Logo AquaSort" height="40" />
+      <span class="brand-name">AquaSort</span>
+    </div>
+    <nav class="nav-menu">
+      <a routerLink="/inicioCliente" class="nav-link">
+        <i class="fas fa-home"></i> Inicio
+      </a>
+      
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle">
+          <i class="fas fa-cog"></i> Configurar <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a routerLink="/perfil" class="dropdown-item"><i class="fas fa-user"></i> Mi Perfil</a>
+          <a routerLink="/ajustes" class="dropdown-item"><i class="fas fa-sliders-h"></i> Ajustes</a>
+          <a routerLink="/preferencias" class="dropdown-item"><i class="fas fa-heart"></i> Preferencias</a>
+        </div>
+      </div>
+      
+      <a routerLink="/carrito" class="nav-link active">
+        <i class="fas fa-shopping-cart"></i> Mi carrito
+        <span class="cart-badge">(1)</span>
+      </a>
+      
+      <button class="logout-btn" (click)="cerrarSesion()">
+        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="cart-container">
+  <h1 class="cart-title">Tu Carrito de Compras</h1>
+  
+  <div class="cart-content">
+    <div class="cart-items">
+      <div class="cart-item">
+        <div class="item-image">
+          <img src="/assets/images/producto-ejemplo.jpg" alt="Filtro de Agua">
+        </div>
+        <div class="item-details">
+          <h3>Filtro de Agua Premium</h3>
+          <p class="item-presentation">Presentación: Kit Completo</p>
+          <div class="item-price">$89.99</div>
+          <div class="item-quantity">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">1</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+        </div>
+        <div class="item-subtotal">$89.99</div>
+        <button class="item-remove">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+
+      <div class="cart-item">
+        <div class="item-image">
+          <img src="/assets/images/producto-ejemplo2.jpg" alt="Repuestos">
+        </div>
+        <div class="item-details">
+          <h3>Repuestos Filtración</h3>
+          <p class="item-presentation">Presentación: Paquete x6</p>
+          <div class="item-price">$24.99</div>
+          <div class="item-quantity">
+            <button class="quantity-btn minus">-</button>
+            <span class="quantity">2</span>
+            <button class="quantity-btn plus">+</button>
+          </div>
+        </div>
+        <div class="item-subtotal">$49.98</div>
+        <button class="item-remove">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h2>Resumen del Pedido</h2>
+      
+      <div class="summary-details">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span>$139.97</span>
+        </div>
+        <div class="summary-row">
+          <span>Envío</span>
+          <span>Gratis</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span>$139.97</span>
+        </div>
+      </div>
+
+      <div class="pickup-date">
+        <label for="pickupDate">Fecha de entrega:</label>
+        <input type="date" id="pickupDate" name="pickupDate" value="2023-12-15" min="2023-12-15" max="2023-12-18">
+        <small>Entrega en 3-5 días hábiles</small>
+      </div>
+
+      <div class="payment-options">
+        <h3>Método de Pago</h3>
+        <div class="payment-methods">
+          <label class="payment-method">
+            <input type="radio" name="payment" checked>
+            <i class="fas fa-credit-card"></i> Tarjeta de crédito
+          </label>
+          <label class="payment-method">
+            <input type="radio" name="payment">
+            <i class="fas fa-money-bill-wave"></i> Efectivo al recibir
+          </label>
+        </div>
+      </div>
+
+      <button class="btn-checkout">Confirmar pedido</button>
+      <button class="btn-continue-shopping" routerLink="/producto">
+        Seguir Comprando
+      </button>
+    </div>
+  </div>
+</main>

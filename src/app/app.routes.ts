@@ -7,6 +7,8 @@ import { sobreNosotros } from './pages/sobreNosotros/sobreNosotros.component';
 import { Producto } from './pages/producto/producto.component';
 import { Contactanos } from './pages/contactanos/contactanos.component';
 import { InicioUsuario } from './pages/inicioUsuario/inicioUsuario.component';
+import { InicioCliente } from './pages/inicioCliente/inicioCliente.component';
+import { Carrito } from './pages/carrito/carrito.component';
 
 export const routes: Routes = [
   // 🔹 Rutas que SÍ usan el Layout
@@ -26,6 +28,8 @@ export const routes: Routes = [
 
   // 🔹 Ruta que NO usa el Layout
   { path: 'inicioUsuario', component: InicioUsuario },
+  { path: 'inicioCliente', component: InicioCliente },
+  { path: 'carrito', component: Carrito },
 
   // 🔹 Fallback
   { path: '**', redirectTo: 'home' }
