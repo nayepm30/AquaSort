@@ -36,7 +36,8 @@
   <h1 class="cart-title">Tu Carrito de Compras</h1>
   
   <div class="cart-content">
-    <div class="cart-items">
+    <!-- Sección de productos más angosta -->
+    <div class="cart-items narrow">
       <div class="cart-item">
         <div class="item-image">
           <img src="/assets/images/producto-ejemplo.jpg" alt="Filtro de Agua">
@@ -58,25 +59,29 @@
       </div>
     </div>
 
-    <div class="order-summary">
-      <h2>Resumen del Pedido</h2>
-      
-      <div class="summary-details">
-        <div class="summary-row">
-          <span>Subtotal</span>
-          <span>$139.97</span>
-        </div>
-        <div class="summary-row">
-          <span>Envío</span>
-          <span>Gratis</span>
-        </div>
-        <div class="summary-row total">
-          <span>Total</span>
-          <span>$139.97</span>
+    <!-- Sección derecha con resumen e información de envío -->
+    <div class="order-section">
+      <!-- Resumen del pedido -->
+      <div class="order-summary">
+        <h2>Resumen del Pedido</h2>
+        
+        <div class="summary-details">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>$139.97</span>
+          </div>
+          <div class="summary-row">
+            <span>Envío</span>
+            <span>Gratis</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>$139.97</span>
+          </div>
         </div>
       </div>
 
-      <!-- Nuevos campos para información de envío -->
+      <!-- Información de envío -->
       <div class="shipping-info">
         <h3>Información de Envío</h3>
         
@@ -97,15 +102,13 @@
         
         <div class="form-group">
           <label for="reference">Referencias</label>
-          <textarea id="reference" rows="3" placeholder="Ejemplo: Casa color rojo, portón negro, junto a la tienda de abarrotes"></textarea>
+          <textarea id="reference" rows="2" placeholder="Ejemplo: Casa color rojo, portón negro"></textarea>
         </div>
         
-        <div class="form-group">
-          <label for="deliveryNotes">Instrucciones de entrega</label>
-          <textarea id="deliveryNotes" rows="2" placeholder="Alguna indicación especial para el repartidor"></textarea>
-        </div>
+        
       </div>
 
+      <!-- Método de pago y botón -->
       <div class="payment-options">
         <h3>Método de Pago</h3>
         <div class="payment-methods">

@@ -28,11 +28,11 @@ export const routes: Routes = [
   },
 
   {
-    path: 'admin',
+    path: '',
     component: LayoutAdministrador,
     children: [
-      { path: 'inicio', component: InicioAdministrador },
-      { path: 'solicitudes', component: SolicitudesPendientes }
+      { path: 'inicioAdministrador', component: InicioAdministrador },
+      { path: 'solicitudesPendientes', component: SolicitudesPendientes }
     ]
   },
 

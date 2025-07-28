@@ -13,6 +13,7 @@ export class SolicitudesPendientes {
     {
       numeroPedido: 'PED001',
       nombre: 'Juan Pérez',
+      telefono: '555-123-4567',
       direccion: 'Calle 123, Col. Centro',
       referencia: 'Casa azul con portón verde',
       cantidadProductos: 3,
@@ -22,6 +23,7 @@ export class SolicitudesPendientes {
     {
       numeroPedido: 'PED002',
       nombre: 'María López',
+      telefono: '555-987-6543',
       direccion: 'Av. Reforma #456',
       referencia: 'Frente a la tienda OXXO',
       cantidadProductos: 5,
@@ -31,6 +33,7 @@ export class SolicitudesPendientes {
     {
       numeroPedido: 'PED003',
       nombre: 'Carlos Ramírez',
+      telefono: '555-456-7890',
       direccion: 'Privada Palma 87',
       referencia: 'Casa con reja negra',
       cantidadProductos: 2,
