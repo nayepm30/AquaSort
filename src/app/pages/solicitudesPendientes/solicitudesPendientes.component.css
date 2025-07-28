@@ -1,0 +1,22 @@
+.tabla-solicitudes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.tabla-solicitudes th,
+.tabla-solicitudes td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.tabla-solicitudes th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.tabla-solicitudes tr:hover {
+  background-color: #f9f9f9;
+}

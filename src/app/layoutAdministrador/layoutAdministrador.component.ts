@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Layout } from '../layout/layout.component';
 
 @Component({
   selector: 'app-header-usuario',
-  templateUrl: './inicioUsuario.component.html',
-  styleUrls: ['./inicioUsuario.component.css']
+  templateUrl: './layoutAdministrador.component.html',
+  styleUrls: ['./layoutAdministrador.component.css']
 })
-export class InicioUsuario {
+
+export class LayoutAdministrador {
   isSidebarCollapsed = false;
   isProductSubmenuOpen = false;
-  isPurchasesSubmenuOpen = false; // Propiedad añadida para controlar el submenú de Compras
+  isPurchasesSubmenuOpen = false; 
+  isProveedoresSubmenuOpen = false; 
 
   constructor(private router: Router) {}
 
@@ -28,5 +31,9 @@ export class InicioUsuario {
 
   toggleProductSubmenu() {
     this.isProductSubmenuOpen = !this.isProductSubmenuOpen;
+  }
+
+  toggleProveedoresSubmenu() {
+    this.isProveedoresSubmenuOpen = !this.isProveedoresSubmenuOpen;
   }
 }

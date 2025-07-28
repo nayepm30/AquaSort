@@ -1,0 +1,20 @@
+<h2>Solicitudes Pendientes</h2>
+
+<table class="tabla-solicitudes">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Referencia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let solicitud of solicitudes">
+      <td>{{ solicitud.nombre }}</td>
+      <td>{{ solicitud.telefono }}</td>
+      <td>{{ solicitud.direccion }}</td>
+      <td>{{ solicitud.referencia }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -6,19 +6,19 @@
       <span>AquaSort</span>
     </div>
     <nav class="sidebar-menu">
-      <a routerLink="/home" routerLinkActive="active"><i class="fas fa-home"></i> Inicio</a>
+      <a routerLink="/inicioAdministrador"><i class="fas fa-home"></i> Inicio</a>
       
       <!-- Menú desplegable para Producto -->
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="toggleProductSubmenu()">
           <i class="fas fa-box"></i>
-          <span>Mi Producto</span>
+          <span>Solicitudes</span>
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isProductSubmenuOpen"></i>
         </div>
         <div class="submenu" [class.open]="isProductSubmenuOpen">
-          <a routerLink="/producto/lista" routerLinkActive="active">Configuración</a>
-          <a routerLink="/producto/agregar" routerLinkActive="active">Ajustes</a>
-          <a routerLink="/producto/categorias" routerLinkActive="active">Categorías</a>
+          <a routerLink="/solicitudesPendientes">Pendientes</a>
+          <a routerLink="/producto/agregar" routerLinkActive="active">Historial</a>
+          
         </div>
       </div>
   
@@ -26,14 +26,29 @@
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="togglePurchasesSubmenu()">
           <i class="fas fa-shopping-cart"></i>
-          <span>Mis Compras</span>
+          <span>Estadisticas</span>
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isPurchasesSubmenuOpen"></i>
         </div>
         <div class="submenu" [class.open]="isPurchasesSubmenuOpen">
-          <a routerLink="/compras/historial" routerLinkActive="active">Historial</a>
-          <a routerLink="/compras/pendientes" routerLinkActive="active">Pendientes</a>
+          <a routerLink="/compras/historial" routerLinkActive="active">Ventas</a>
+          <a routerLink="/compras/pendientes" routerLinkActive="active">Compras</a>
+          <a routerLink="/compras/pendientes" routerLinkActive="active">Inventario</a>
         </div>
       </div>
+
+      <div class="menu-item-with-submenu">
+        <div class="menu-header" (click)="toggleProveedoresSubmenu()">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Proveedores</span>
+          <i class="fas fa-angle-down submenu-icon" [class.rotated]="isProveedoresSubmenuOpen"></i>
+        </div>
+        <div class="submenu" [class.open]="isProveedoresSubmenuOpen">
+          <a routerLink="/compras/historial" routerLinkActive="active">Productos</a>
+          <a routerLink="/compras/pendientes" routerLinkActive="active">Compras</a>
+          <a routerLink="/compras/pendientes" routerLinkActive="active">Ventas</a>
+        </div>
+      </div>
+
     </nav>
     <div class="sidebar-footer">
       <a routerLink="/perfil" routerLinkActive="active"><i class="fas fa-user"></i> Mi Perfil</a>

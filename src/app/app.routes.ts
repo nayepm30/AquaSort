@@ -6,12 +6,13 @@ import { Registro } from './pages/registro/registro.component';
 import { sobreNosotros } from './pages/sobreNosotros/sobreNosotros.component';
 import { Producto } from './pages/producto/producto.component';
 import { Contactanos } from './pages/contactanos/contactanos.component';
-import { InicioUsuario } from './pages/inicioUsuario/inicioUsuario.component';
 import { InicioCliente } from './pages/inicioCliente/inicioCliente.component';
 import { Carrito } from './pages/carrito/carrito.component';
+import { InicioAdministrador } from './pages/inicioAdministrador/inicioAdministrador.component';
+import { SolicitudesPendientes } from './pages/solicitudesPendientes/solicitudesPendientes.component';
+import { LayoutAdministrador } from './layoutAdministrador/layoutAdministrador.component';
 
 export const routes: Routes = [
-  // 🔹 Rutas que SÍ usan el Layout
   {
     path: '',
     component: Layout,
@@ -26,11 +27,16 @@ export const routes: Routes = [
     ]
   },
 
+  {path: '',
+    component: LayoutAdministrador,
+    children: [
+      { path: 'inicioAdministrador', component: InicioAdministrador },
+      { path: 'solicitudesPendientes', component: SolicitudesPendientes },
+    ]
+  },
   // 🔹 Ruta que NO usa el Layout
-  { path: 'inicioUsuario', component: InicioUsuario },
   { path: 'inicioCliente', component: InicioCliente },
   { path: 'carrito', component: Carrito },
-
   // 🔹 Fallback
   { path: '**', redirectTo: 'home' }
 ];
