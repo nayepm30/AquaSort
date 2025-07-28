@@ -11,5 +11,6 @@ export class InicioAdministrador {
 
   constructor(private router: Router) {}
 
- 
+  
+
 }

@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Layout } from '../layout/layout.component';
+import { RouterOutlet } from '@angular/router'; // ✅ Importa RouterOutlet
 
 @Component({
   selector: 'app-header-usuario',
+  standalone: true, // ✅ Marca el componente como standalone
+  imports: [RouterOutlet], // ✅ Agrega RouterOutlet aquí
   templateUrl: './layoutAdministrador.component.html',
   styleUrls: ['./layoutAdministrador.component.css']
 })
-
 export class LayoutAdministrador {
   isSidebarCollapsed = false;
   isProductSubmenuOpen = false;
-  isPurchasesSubmenuOpen = false; 
-  isProveedoresSubmenuOpen = false; 
+  isPurchasesSubmenuOpen = false;
+  isProveedoresSubmenuOpen = false;
 
   constructor(private router: Router) {}
 

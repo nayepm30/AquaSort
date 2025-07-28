@@ -56,26 +56,6 @@
           <i class="fas fa-trash"></i>
         </button>
       </div>
-
-      <div class="cart-item">
-        <div class="item-image">
-          <img src="/assets/images/producto-ejemplo2.jpg" alt="Repuestos">
-        </div>
-        <div class="item-details">
-          <h3>Repuestos Filtración</h3>
-          <p class="item-presentation">Presentación: Paquete x6</p>
-          <div class="item-price">$24.99</div>
-          <div class="item-quantity">
-            <button class="quantity-btn minus">-</button>
-            <span class="quantity">2</span>
-            <button class="quantity-btn plus">+</button>
-          </div>
-        </div>
-        <div class="item-subtotal">$49.98</div>
-        <button class="item-remove">
-          <i class="fas fa-trash"></i>
-        </button>
-      </div>
     </div>
 
     <div class="order-summary">
@@ -96,10 +76,34 @@
         </div>
       </div>
 
-      <div class="pickup-date">
-        <label for="pickupDate">Fecha de entrega:</label>
-        <input type="date" id="pickupDate" name="pickupDate" value="2023-12-15" min="2023-12-15" max="2023-12-18">
-        <small>Entrega en 3-5 días hábiles</small>
+      <!-- Nuevos campos para información de envío -->
+      <div class="shipping-info">
+        <h3>Información de Envío</h3>
+        
+        <div class="form-group">
+          <label for="fullName">Nombre Completo</label>
+          <input type="text" id="fullName" placeholder="Ingresa tu nombre completo" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="phone">Teléfono de Contacto</label>
+          <input type="tel" id="phone" placeholder="Ingresa tu número telefónico" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="address">Dirección</label>
+          <input type="text" id="address" placeholder="Calle, número, colonia" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="reference">Referencias</label>
+          <textarea id="reference" rows="3" placeholder="Ejemplo: Casa color rojo, portón negro, junto a la tienda de abarrotes"></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="deliveryNotes">Instrucciones de entrega</label>
+          <textarea id="deliveryNotes" rows="2" placeholder="Alguna indicación especial para el repartidor"></textarea>
+        </div>
       </div>
 
       <div class="payment-options">
@@ -107,19 +111,12 @@
         <div class="payment-methods">
           <label class="payment-method">
             <input type="radio" name="payment" checked>
-            <i class="fas fa-credit-card"></i> Tarjeta de crédito
-          </label>
-          <label class="payment-method">
-            <input type="radio" name="payment">
             <i class="fas fa-money-bill-wave"></i> Efectivo al recibir
           </label>
         </div>
       </div>
 
       <button class="btn-checkout">Confirmar pedido</button>
-      <button class="btn-continue-shopping" routerLink="/producto">
-        Seguir Comprando
-      </button>
     </div>
   </div>
 </main>

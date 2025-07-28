@@ -6,9 +6,10 @@
       <span>AquaSort</span>
     </div>
     <nav class="sidebar-menu">
-      <a routerLink="/inicioAdministrador"><i class="fas fa-home"></i> Inicio</a>
+      <a routerLink="/admin/inicio"><i class="fas fa-home"></i> Inicio</a>
+
       
-      <!-- Menú desplegable para Producto -->
+      <!-- Menú desplegable para Solicitudes -->
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="toggleProductSubmenu()">
           <i class="fas fa-box"></i>
@@ -16,17 +17,17 @@
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isProductSubmenuOpen"></i>
         </div>
         <div class="submenu" [class.open]="isProductSubmenuOpen">
-          <a routerLink="/solicitudesPendientes">Pendientes</a>
+          <a routerLink="/admin/solicitudes">Pendientes</a>
+
           <a routerLink="/producto/agregar" routerLinkActive="active">Historial</a>
-          
         </div>
       </div>
-  
-      <!-- Menú desplegable para Mis Compras -->
+
+      <!-- Menú desplegable para Estadísticas -->
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="togglePurchasesSubmenu()">
           <i class="fas fa-shopping-cart"></i>
-          <span>Estadisticas</span>
+          <span>Estadísticas</span>
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isPurchasesSubmenuOpen"></i>
         </div>
         <div class="submenu" [class.open]="isPurchasesSubmenuOpen">
@@ -36,9 +37,10 @@
         </div>
       </div>
 
+      <!-- Menú desplegable para Proveedores -->
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="toggleProveedoresSubmenu()">
-          <i class="fas fa-shopping-cart"></i>
+          <i class="fas fa-truck"></i>
           <span>Proveedores</span>
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isProveedoresSubmenuOpen"></i>
         </div>
@@ -48,32 +50,36 @@
           <a routerLink="/compras/pendientes" routerLinkActive="active">Ventas</a>
         </div>
       </div>
-
     </nav>
+
     <div class="sidebar-footer">
       <a routerLink="/perfil" routerLinkActive="active"><i class="fas fa-user"></i> Mi Perfil</a>
-      <button (click)="cerrarSesion()" class="logout-link"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
+      <button (click)="cerrarSesion()" class="logout-link">
+        <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+      </button>
     </div>
   </aside>
 
   <!-- Contenido principal con header -->
   <div class="main-content">
     <header class="header-logged">
-      <!-- Botón hamburguesa con animación -->
+      <!-- Botón hamburguesa -->
       <button class="toggle-sidebar-btn" (click)="toggleSidebar()">
         <i class="fas fa-bars" [class.rotated]="isSidebarCollapsed"></i>
       </button>
-      
-      <!-- Logo y nombre centrado -->
+
+      <!-- Logo centrado -->
       <div class="header-brand-center">
         <img src="/assets/images/logo.png" alt="Logo AquaSort" height="30">
         <span>AquaSort</span>
       </div>
-      
-      <!-- Espacio para balancear el diseño (opcional) -->
+
       <div class="header-spacer"></div>
     </header>
 
-    
+    <!-- 🔽 AQUI se muestran las páginas hijas (como InicioAdministrador, Solicitudes, etc.) -->
+    <main class="layout-content">
+      <router-outlet></router-outlet>
+    </main>
   </div>
 </div>

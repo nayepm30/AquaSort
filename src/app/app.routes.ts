@@ -27,16 +27,16 @@ export const routes: Routes = [
     ]
   },
 
-  {path: '',
+  {
+    path: 'admin',
     component: LayoutAdministrador,
     children: [
-      { path: 'inicioAdministrador', component: InicioAdministrador },
-      { path: 'solicitudesPendientes', component: SolicitudesPendientes },
+      { path: 'inicio', component: InicioAdministrador },
+      { path: 'solicitudes', component: SolicitudesPendientes }
     ]
   },
-  // 🔹 Ruta que NO usa el Layout
+
   { path: 'inicioCliente', component: InicioCliente },
   { path: 'carrito', component: Carrito },
-  // 🔹 Fallback
   { path: '**', redirectTo: 'home' }
 ];

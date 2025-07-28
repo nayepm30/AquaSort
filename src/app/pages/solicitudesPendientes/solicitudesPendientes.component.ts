@@ -1,33 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-solicitudes-pendientes',
+  selector: 'solicitudes-pendientes',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './solicitudesPendientes.component.html',
   styleUrls: ['./solicitudesPendientes.component.css']
 })
-export class SolicitudesPendientes implements OnInit {
-  solicitudes = [
+export class SolicitudesPendientes {
+  pedidos = [
     {
-      nombre: 'Sandra Ponce',
-      telefono: '1234567890',
-      direccion: 'Calle Falsa 123',
-      referencia: 'Casa azul con portón negro'
+      numeroPedido: 'PED001',
+      nombre: 'Juan Pérez',
+      direccion: 'Calle 123, Col. Centro',
+      referencia: 'Casa azul con portón verde',
+      cantidadProductos: 3,
+      total: 450,
+      fecha: '2025-07-25'
     },
     {
-      nombre: 'Luis Martínez',
-      telefono: '9876543210',
-      direccion: 'Av. Reforma 456',
-      referencia: 'Frente al parque'
+      numeroPedido: 'PED002',
+      nombre: 'María López',
+      direccion: 'Av. Reforma #456',
+      referencia: 'Frente a la tienda OXXO',
+      cantidadProductos: 5,
+      total: 780,
+      fecha: '2025-07-27'
     },
     {
-      nombre: 'Carla Gómez',
-      telefono: '5551234567',
-      direccion: 'Calle 5 de Mayo #89',
-      referencia: 'Tercer piso, timbre rojo'
+      numeroPedido: 'PED003',
+      nombre: 'Carlos Ramírez',
+      direccion: 'Privada Palma 87',
+      referencia: 'Casa con reja negra',
+      cantidadProductos: 2,
+      total: 250,
+      fecha: '2025-07-28'
     }
   ];
 
-  constructor() {}
+  aceptarPedido(pedido: any) {
+    console.log('Pedido aceptado:', pedido.numeroPedido);
+    // Aquí podrías enviar la acción al backend o eliminar el pedido de la lista
+  }
 
-  ngOnInit(): void {}
+  rechazarPedido(pedido: any) {
+    console.log('Pedido rechazado:', pedido.numeroPedido);
+    // Igual aquí puedes manejar el rechazo
+  }
 }

@@ -465,3 +465,51 @@
     margin-top: 0.8rem;
   }
 }
+
+/* Estilos para la sección de información de envío */
+.shipping-info {
+  margin: 1.5rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.shipping-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #006577;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #006577;
+  box-shadow: 0 0 0 2px rgba(0, 101, 119, 0.1);
+}
+
+.form-group textarea {
+  min-height: 60px;
+  resize: vertical;
+}
