@@ -11,6 +11,7 @@ import { Carrito } from './pages/carrito/carrito.component';
 import { InicioAdministrador } from './pages/inicioAdministrador/inicioAdministrador.component';
 import { SolicitudesPendientes } from './pages/solicitudesPendientes/solicitudesPendientes.component';
 import { LayoutAdministrador } from './layoutAdministrador/layoutAdministrador.component';
+import { SolicitudesHistorial } from './pages/solicitudesHistorial/solicitudesHistorial.component';
 
 export const routes: Routes = [
   {
@@ -32,7 +33,8 @@ export const routes: Routes = [
     component: LayoutAdministrador,
     children: [
       { path: 'inicioAdministrador', component: InicioAdministrador },
-      { path: 'solicitudesPendientes', component: SolicitudesPendientes }
+      { path: 'solicitudesPendientes', component: SolicitudesPendientes },
+      { path: 'solicitudesHistorial', component: SolicitudesHistorial }
     ]
   },
 

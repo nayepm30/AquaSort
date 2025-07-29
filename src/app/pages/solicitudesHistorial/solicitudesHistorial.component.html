@@ -1,0 +1,29 @@
+<!-- solicitudesHistorial.component.html -->
+<h1>Historial de Pedidos Aceptados</h1>
+
+<table class="tabla-pedidos">
+  <thead>
+    <tr>
+      <th># Pedido</th>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Dirección</th>
+      <th>Referencia</th>
+      <th>Fecha Aceptación</th>
+      <th>Cantidad</th>
+      <th>Total ($)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pedido of pedidosAceptados">
+      <td>{{ pedido.numeroPedido }}</td>
+      <td>{{ pedido.nombre }}</td>
+      <td>{{ pedido.telefono }}</td>
+      <td>{{ pedido.direccion }}</td>
+      <td>{{ pedido.referencia }}</td>
+      <td>{{ pedido.fechaAceptacion }}</td>
+      <td>{{ pedido.cantidadProductos }}</td>
+      <td>{{ pedido.total }}</td>
+    </tr>
+  </tbody>
+</table>
