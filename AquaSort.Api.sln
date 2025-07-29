@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AquaSort.Api", "AquaSort.Api.csproj", "{82695445-EE8C-7880-5F2B-B228E04D0A69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82695445-EE8C-7880-5F2B-B228E04D0A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82695445-EE8C-7880-5F2B-B228E04D0A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82695445-EE8C-7880-5F2B-B228E04D0A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82695445-EE8C-7880-5F2B-B228E04D0A69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42459D92-655E-4515-9B8E-91508D0DB3F1}
+	EndGlobalSection
+EndGlobal
