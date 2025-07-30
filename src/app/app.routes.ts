@@ -12,6 +12,8 @@ import { InicioAdministrador } from './pages/inicioAdministrador/inicioAdministr
 import { SolicitudesPendientes } from './pages/solicitudesPendientes/solicitudesPendientes.component';
 import { LayoutAdministrador } from './layoutAdministrador/layoutAdministrador.component';
 import { SolicitudesHistorial } from './pages/solicitudesHistorial/solicitudesHistorial.component';
+import { MisPedidos } from './pages/misPedidos/misPedidos.component';
+import { LayoutCliente } from './layoutCliente/layoutCliente.component';
 
 export const routes: Routes = [
   {
@@ -38,7 +40,15 @@ export const routes: Routes = [
     ]
   },
 
-  { path: 'inicioCliente', component: InicioCliente },
-  { path: 'carrito', component: Carrito },
+  {
+    path: '',
+    component: LayoutCliente,
+    children: [
+      { path: 'inicioCliente', component: InicioCliente },
+      { path: 'carrito', component: Carrito },
+      { path: 'misPedidos', component: MisPedidos }
+    ]
+  },
+
   { path: '**', redirectTo: 'home' }
 ];

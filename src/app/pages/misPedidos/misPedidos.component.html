@@ -1,0 +1,44 @@
+<main class="pedidos-container">
+  <h1 class="heading-1">Mis Pedidos</h1>
+
+  <div *ngIf="pedidos.length > 0" class="orders-grid">
+    <div *ngFor="let pedido of pedidos" class="order-card">
+      <div class="order-header">
+        <h3>Pedido #{{ pedido.idPedidos }}</h3>
+        <span class="order-status" [ngClass]="pedido.estatus.toLowerCase()">{{ pedido.estatus }}</span>
+      </div>
+      
+      <div class="order-details">
+        <div class="detail-row">
+          <span>Fecha del pedido:</span>
+          <span>{{ formatDate(pedido.fecha_pedido) }}</span>
+        </div>
+        <div *ngIf="pedido.fecha_entrega" class="detail-row">
+          <span>Fecha de entrega:</span>
+          <span>{{ formatDate(pedido.fecha_entrega) }}</span>
+        </div>
+      </div>
+
+      <div class="order-products">
+        <h4>Productos:</h4>
+        <ul>
+          <li *ngFor="let detalle of pedido.detalles">
+            {{ detalle.producto.nombre }} - 
+            {{ detalle.cantidad }} x ${{ calcularSubtotal(detalle) | number:'1.2-2' }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="order-total">
+        <span>Total:</span>
+        <span>${{ pedido.total | number:'1.2-2' }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="pedidos.length === 0" class="empty-orders">
+    <img src="/assets/images/empty-orders.png" alt="No hay pedidos">
+    <h3>No tienes pedidos registrados</h3>
+    <a routerLink="/productos" class="btn-shop">Ver Productos</a>
+  </div>
+</main>

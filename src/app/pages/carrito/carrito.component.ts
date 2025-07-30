@@ -21,10 +21,7 @@ export class Carrito {
     });
   }
 
-  cerrarSesion(): void {
-    // Lógica para cerrar sesión
-    this.router.navigate(['/login']);
-  }
+
 
   onSubmit(): void {
     if (this.checkoutForm.valid) {

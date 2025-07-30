@@ -7,10 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./inicioCliente.component.css']
 })
 export class InicioCliente {
-  constructor(private router: Router) {}
 
-  cerrarSesion() {
-    localStorage.clear();
-    this.router.navigate(['/login']);
-  }
 }
