@@ -1,0 +1,26 @@
+<div class="inventario-container">
+  <h1>Inventario</h1>
+
+  <table class="tabla-inventario">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Stock Actual</th>
+        <th>Agregar Stock</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.stock }}</td>
+        <td>
+          <input type="number" [(ngModel)]="producto.cantidadAgregar" min="1" placeholder="0">
+        </td>
+        <td>
+          <button class="btn-agregar">Agregar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

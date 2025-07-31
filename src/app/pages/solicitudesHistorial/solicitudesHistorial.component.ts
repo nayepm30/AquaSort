@@ -13,7 +13,5 @@ import { CommonModule } from '@angular/common';
 export class SolicitudesHistorial {
   pedidosAceptados: any[] = [];
 
-  //constructor(private solicitudesService: SolicitudesService) {
-   // this.pedidosAceptados = this.solicitudesService.getPedidosAceptados();
-  //}
+ 
 }

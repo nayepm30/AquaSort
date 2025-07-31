@@ -1,0 +1,60 @@
+.inventario-container {
+  margin: 40px 5%;
+  margin-top: 6%;
+}
+
+.inventario-container h1 {
+  color: #006577;
+  margin-bottom: 20px;
+}
+
+.tabla-inventario {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tabla-inventario th,
+.tabla-inventario td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-inventario th {
+  background-color: #006577;
+  color: white;
+  font-weight: 500;
+}
+
+.tabla-inventario input[type="number"] {
+  width: 80px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-agregar {
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-agregar:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tabla-inventario {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .inventario-container {
+    margin: 20px;
+  }
+}

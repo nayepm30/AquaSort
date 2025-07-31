@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LayoutCliente } from './layoutCliente.component';
+import { EstadisticasVentas } from './estadisticas-ventas';
 
-describe('LayoutCliente', () => {
-  let component: LayoutCliente;
-  let fixture: ComponentFixture<LayoutCliente>;
+describe('EstadisticasVentas', () => {
+  let component: EstadisticasVentas;
+  let fixture: ComponentFixture<EstadisticasVentas>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LayoutCliente]
+      imports: [EstadisticasVentas]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LayoutCliente);
+    fixture = TestBed.createComponent(EstadisticasVentas);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

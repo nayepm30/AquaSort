@@ -12,8 +12,10 @@ import { InicioAdministrador } from './pages/inicioAdministrador/inicioAdministr
 import { SolicitudesPendientes } from './pages/solicitudesPendientes/solicitudesPendientes.component';
 import { LayoutAdministrador } from './layoutAdministrador/layoutAdministrador.component';
 import { SolicitudesHistorial } from './pages/solicitudesHistorial/solicitudesHistorial.component';
-import { MisPedidos } from './pages/misPedidos/misPedidos.component';
 import { LayoutCliente } from './layoutCliente/layoutCliente.component';
+import { MisPedidos } from './pages/misPedidos/misPedidos.component';
+import { EstadisticasVentas } from './pages/estadisticasVentas/estadisticasVentas.component';
+import { Inventario } from './pages/inventario/inventario.component';
 
 export const routes: Routes = [
   {
@@ -36,7 +38,9 @@ export const routes: Routes = [
     children: [
       { path: 'inicioAdministrador', component: InicioAdministrador },
       { path: 'solicitudesPendientes', component: SolicitudesPendientes },
-      { path: 'solicitudesHistorial', component: SolicitudesHistorial }
+      { path: 'solicitudesHistorial', component: SolicitudesHistorial },
+      { path: 'estadisticasVentas', component: EstadisticasVentas },
+      { path: 'inventario', component: Inventario },
     ]
   },
 
@@ -46,7 +50,7 @@ export const routes: Routes = [
     children: [
       { path: 'inicioCliente', component: InicioCliente },
       { path: 'carrito', component: Carrito },
-      { path: 'misPedidos', component: MisPedidos }
+      { path: 'misPedidos', component: MisPedidos },
     ]
   },
 

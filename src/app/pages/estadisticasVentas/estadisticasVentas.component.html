@@ -1,0 +1,33 @@
+<h1>Tarjeta de Almacenamiento</h1>
+<h3>Producto: Filtro de agua</h3>
+
+<table class="tabla-almacen">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Entrada</th>
+      <th>Salida</th>
+      <th>Existencia</th>
+      <th>Costo</th>
+      <th>Promedio</th>
+      <th>Debe</th>
+      <th>Haber</th>
+      <th>Saldo</th>
+      <th></th> <!-- Campo vacío adicional -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let registro of tarjetaAlmacenamiento">
+      <td>{{ registro.fecha }}</td>
+      <td>{{ registro.entrada }}</td>
+      <td>{{ registro.salida }}</td>
+      <td>{{ registro.existencia }}</td>
+      <td>{{ registro.costo }}</td>
+      <td>{{ registro.promedio }}</td>
+      <td>{{ registro.debe }}</td>
+      <td>{{ registro.haber }}</td>
+      <td>{{ registro.saldo }}</td>
+      <td></td> <!-- Celda vacía -->
+    </tr>
+  </tbody>
+</table>

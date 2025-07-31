@@ -6,9 +6,8 @@
       <span>AquaSort</span>
     </div>
     <nav class="sidebar-menu">
-      <a routerLink="/admin/inicio"><i class="fas fa-home"></i> Inicio</a>
+      <a routerLink="/inicioAdministrador"><i class="fas fa-home"></i> Inicio</a>
 
-      
       <!-- Menú desplegable para Solicitudes -->
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="toggleProductSubmenu()">
@@ -17,13 +16,12 @@
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isProductSubmenuOpen"></i>
         </div>
         <div class="submenu" [class.open]="isProductSubmenuOpen">
-          <a routerLink="/admin/solicitudes">Pendientes</a>
-
-          <a routerLink="/producto/agregar" routerLinkActive="active">Historial</a>
+          <a routerLink="/solicitudesPendientes">Pendientes</a>
+          <a routerLink="/solicitudesHistorial" routerLinkActive="active">Historial</a>
         </div>
       </div>
 
-      <!-- Menú desplegable para Estadísticas -->
+      <!-- Menú desplegable para Estadísticas (sin Inventario) -->
       <div class="menu-item-with-submenu">
         <div class="menu-header" (click)="togglePurchasesSubmenu()">
           <i class="fas fa-shopping-cart"></i>
@@ -31,11 +29,15 @@
           <i class="fas fa-angle-down submenu-icon" [class.rotated]="isPurchasesSubmenuOpen"></i>
         </div>
         <div class="submenu" [class.open]="isPurchasesSubmenuOpen">
-          <a routerLink="/compras/historial" routerLinkActive="active">Ventas</a>
+          <a routerLink="/estadisticas-ventas" routerLinkActive="active">Ventas</a>
           <a routerLink="/compras/pendientes" routerLinkActive="active">Compras</a>
-          <a routerLink="/compras/pendientes" routerLinkActive="active">Inventario</a>
         </div>
       </div>
+
+      <!-- Inventario como ítem independiente -->
+      <a routerLink="/inventario" routerLinkActive="active">
+        <i class="fas fa-boxes"></i> Inventario
+      </a>
 
       <!-- Menú desplegable para Proveedores -->
       <div class="menu-item-with-submenu">
@@ -77,7 +79,6 @@
       <div class="header-spacer"></div>
     </header>
 
-    <!-- 🔽 AQUI se muestran las páginas hijas (como InicioAdministrador, Solicitudes, etc.) -->
     <main class="layout-content">
       <router-outlet></router-outlet>
     </main>
