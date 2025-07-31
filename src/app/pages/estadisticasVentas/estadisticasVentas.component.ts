@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'estadisticas-ventas',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './estadisticasVentas.component.html',
-  styleUrl: './estadisticasVentas.component.css'
+  styleUrls: ['./estadisticasVentas.component.css']
 })
 export class EstadisticasVentas {
-
+  tarjetaAlmacenamiento: any[] = [];
 }
