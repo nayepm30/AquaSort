@@ -1,29 +1,43 @@
-using AquaSort.Api.Data;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore; // <-- Agrega este using si no lo tienes
+using AquaSort.Api.Data; // <-- El namespace donde está tu AquaSortContext
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar DbContext con conexión SQL Server
+// Agregar servicios
+builder.Services.AddControllers();
+
+// REGISTRA AQUÍ TU CONTEXTO
 builder.Services.AddDbContext<AquaSortContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddDistributedMemoryCache();
 
-// Configurar Swagger/OpenAPI
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+// Configurar CORS para permitir Angular con credenciales
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngular", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials();
+    });
+});
 
 var app = builder.Build();
 
-// Configurar pipeline HTTP
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAngular");
+
+app.UseSession();
 
 app.UseAuthorization();
 

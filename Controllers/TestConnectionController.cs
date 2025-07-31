@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+// archivo de prueba para probar la api 
 namespace AquaSort.Api.Controllers
 {
     [ApiController]
