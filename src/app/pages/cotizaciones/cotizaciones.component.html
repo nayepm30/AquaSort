@@ -1,0 +1,35 @@
+<main class="quote-container">
+  <h1 class="quote-title">Solicitud de Cotización</h1>
+
+  <div class="quote-content">
+    <!-- Información de la cotización -->
+    <div class="quote-form">
+      <div class="form-group">
+        <label for="productQuantity">Cantidad de Productos</label>
+        <input type="number" id="productQuantity" placeholder="Ej. 10" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Domicilio</label>
+        <input type="text" id="address" placeholder="Calle, número, colonia" required>
+      </div>
+
+      <!-- Nuevo campo de tipo de instalación -->
+      <div class="form-group">
+        <label>Tipo de Instalación</label>
+        <div class="installation-options">
+          <label class="radio-option">
+            <input type="radio" name="installationType" value="rural" checked>
+            Instalación en Zona Rural
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="installationType" value="industrial">
+            Instalación en Zona Industrial
+          </label>
+        </div>
+      </div>
+
+      <button class="btn-send-quote">Enviar Cotización</button>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,96 @@
+.quote-container {
+  max-width: 700px;
+  margin: 100px auto 2rem;
+  padding: 0 1.5rem;
+  font-size: 14px;
+}
+
+.quote-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #006577;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.quote-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #006577;
+  box-shadow: 0 0 0 2px rgba(0, 101, 119, 0.1);
+}
+
+.form-group textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.btn-send-quote {
+  width: 100%;
+  padding: 1rem;
+  background: #006577;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-send-quote:hover {
+  background: #004d63;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.installation-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #006577; /* Color del círculo */
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

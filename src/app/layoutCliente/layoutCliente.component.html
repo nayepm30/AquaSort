@@ -8,9 +8,36 @@
       <a routerLink="/inicioCliente" class="nav-link">
         <i class="fas fa-home"></i> Inicio
       </a>
-      <a routerLink="/carrito" class="nav-link">
-        <i class="fas fa-shopping-cart"></i> Mi carrito
-      </a>
+
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle">
+          <i class="fas fa-shopping-cart"></i> Mi carrito <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a routerLink="/carrito" class="dropdown-item">
+            <i class="fas fa-user"></i> Comprar
+          </a>
+          <a routerLink="/misPedidos" class="dropdown-item">
+            <i class="fas fa-clipboard-list"></i> Historial
+          </a>
+        </div>
+      </div>
+
+    
+
+      <div class="dropdown">
+        <a class="nav-link dropdown-toggle">
+          <i class="fas fa-shopping-cart"></i> Cotizaciones<i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a routerLink="/cotizaciones" class="dropdown-item">
+            <i class="fas fa-user"></i> Quiero cotizar
+          </a>
+          <a routerLink="/cotizacionesPendientes" class="dropdown-item">
+            <i class="fas fa-clipboard-list"></i> Cotizaciones pendientes
+          </a>
+        </div>
+      </div>
 
       <div class="dropdown">
         <a class="nav-link dropdown-toggle">
@@ -19,9 +46,6 @@
         <div class="dropdown-menu">
           <a routerLink="/perfil" class="dropdown-item">
             <i class="fas fa-user"></i> Mi perfil
-          </a>
-          <a routerLink="/misPedidos" class="dropdown-item">
-            <i class="fas fa-clipboard-list"></i> Mis pedidos
           </a>
         </div>
       </div>

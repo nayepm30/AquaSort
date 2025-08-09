@@ -1,0 +1,87 @@
+.home-cliente-container {
+  max-width: 900px;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  color: #004d63;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #006577;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #e6f0f2;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  text-align: center;
+  color: #006577;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 8px rgba(0, 101, 119, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 180px;
+  user-select: none;
+  text-decoration: none;
+}
+
+.card i {
+  font-size: 2.8rem;
+}
+
+.card:hover {
+  background: #c7e1e6;
+  box-shadow: 0 6px 15px rgba(0, 101, 119, 0.3);
+  transform: translateY(-5px);
+}
+
+.info-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  color: #004d63;
+}
+
+.info-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #006577;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.info-section li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.4rem;
+  text-align: left;
+}
+
+.info-section li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #006577;
+  font-weight: bold;
+}

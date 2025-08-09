@@ -1,0 +1,47 @@
+<main class="pedidos-container">
+  <h1 class="heading-1">Cotizaciones Pendientes</h1>
+
+  <div *ngIf="cotizaciones.length > 0" class="orders-grid">
+    <div *ngFor="let cotizacion of cotizaciones" class="order-card">
+      <div class="order-header">
+        <h3>Cotización #{{ cotizacion.idCotizacion }}</h3>
+        <span class="order-status" [ngClass]="cotizacion.estatus.toLowerCase()">{{ cotizacion.estatus }}</span>
+      </div>
+      
+      <div class="order-details">
+        <div class="detail-row">
+          <span>Fecha de cotización:</span>
+          <span>{{ formatDate(cotizacion.fecha_creacion) }}</span>
+        </div>
+        <div class="detail-row">
+          <span>Cantidad de productos:</span>
+          <span>{{ cotizacion.detalles.length }}</span>
+        </div>
+        <div class="detail-row">
+          <span>Domicilio:</span>
+          <span>{{ cotizacion.domicilio }}</span>
+        </div>
+        <div class="detail-row">
+          <span>Tipo de instalación:</span>
+          <span>{{ cotizacion.tipo_instalacion }}</span>
+        </div>
+      </div>
+
+      <!-- Sección de respuesta para todas las cotizaciones -->
+      <div class="response-section">
+        <div class="separator-line"></div>
+        <div class="response-content">
+          <h4>Respuesta:</h4>
+          <p *ngIf="cotizacion.estatus === 'Pendiente'">Estamos procesando tu solicitud, te responderemos pronto.</p>
+          <p *ngIf="cotizacion.estatus === 'Respondida'">Total de presupuesto: <strong>$400</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="cotizaciones.length === 0" class="empty-orders">
+    <img src="/assets/images/empty-orders.png" alt="No hay cotizaciones">
+    <h3>No tienes cotizaciones registradas</h3>
+    <a routerLink="/productos" class="btn-shop">Ver Productos</a>
+  </div>
+</main>
