@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'inicio-cliente',
+  imports: [CommonModule, RouterLink],
   templateUrl: './inicioCliente.component.html',
   styleUrls: ['./inicioCliente.component.css']
 })
@@ -12,16 +14,23 @@ export class InicioCliente implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    // Aquí podrías obtener el nombre del usuario desde tu servicio de autenticación real
-    // Por ejemplo: this.userName = this.authService.getUserName();
-    // Por ahora lo simulo:
+    // Obtener nombre del usuario desde localStorage
     this.userName = localStorage.getItem('userName') || 'Cliente';
   }
 
   cerrarSesion(): void {
-    // Aquí debes limpiar el token o sesión y luego redirigir
+    // Limpiar datos de sesión
     localStorage.removeItem('token');
     localStorage.removeItem('userName');
     this.router.navigate(['/login']);
+  }
+
+  // Métodos alternativos para navegación si se prefiere
+  irACarrito(): void {
+    this.router.navigate(['/carrito']);
+  }
+
+  irACotizaciones(): void {
+    this.router.navigate(['/cotizacionesPendientes']);
   }
 }

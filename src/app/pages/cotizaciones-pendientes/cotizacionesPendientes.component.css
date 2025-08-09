@@ -218,3 +218,92 @@
   font-size: 0.9rem;
   line-height: 1.4;
 }
+
+/* Estilos para el desglose de costos */
+.breakdown {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.breakdown h5 {
+  color: #006577;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px dashed #eee;
+}
+
+.cost-description {
+  color: #555;
+}
+
+.cost-amount {
+  font-weight: 500;
+  color: #333;
+}
+
+.cost-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ddd;
+  font-weight: bold;
+  color: #006577;
+}
+
+.response-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.separator-line {
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 1rem;
+}
+
+.response-content h4 {
+  color: #006577;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.response-content p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Estilos para el botón Aceptar y comprar */
+.accept-button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.accept-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.accept-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}

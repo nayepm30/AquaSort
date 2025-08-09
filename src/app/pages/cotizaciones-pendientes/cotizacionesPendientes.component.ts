@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cotizaciones-pendientes',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cotizacionesPendientes.component.css']
 })
 export class CotizacionesPendientes implements OnInit {
+
+  constructor(private router: Router) {}
 
   cotizaciones: any[] = [];
 
@@ -22,9 +25,7 @@ export class CotizacionesPendientes implements OnInit {
         detalles: [
           { producto: { nombre: 'Material eléctrico' } },
           { producto: { nombre: 'Equipo de seguridad' } }
-        ],
-        respuesta: 'Hemos recibido tu cotización y estamos trabajando en ella. Nos pondremos en contacto contigo en breve.'
-     
+        ]
       },
       {
         idCotizacion: 2,
@@ -35,7 +36,12 @@ export class CotizacionesPendientes implements OnInit {
         detalles: [
           { producto: { nombre: 'Paneles solares' } }
         ],
-        respuesta: 'Hemos recibido tu cotización y estamos trabajando en ella. Nos pondremos en contacto contigo en breve.'
+        detalleCostos: [
+          { descripcion: 'Filtro de agua', monto: 200 },
+          { descripcion: 'Instalación', monto: 100 },
+          { descripcion: 'Materiales', monto: 100 }
+        ],
+        total: 400
       }
     ];
   }
@@ -47,6 +53,14 @@ export class CotizacionesPendientes implements OnInit {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
+    });
+  }
+
+  aceptarCotizacion(cotizacion: any): void {
+    
+    // Redirigir a la página de carrito
+    this.router.navigate(['/carrito'], {
+      state: { cotizacion: cotizacion } // Opcional: enviar datos de la cotización
     });
   }
 }

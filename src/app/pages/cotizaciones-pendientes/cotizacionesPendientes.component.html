@@ -27,13 +27,29 @@
         </div>
       </div>
 
-      <!-- Sección de respuesta para todas las cotizaciones -->
       <div class="response-section">
         <div class="separator-line"></div>
         <div class="response-content">
           <h4>Respuesta:</h4>
-          <p *ngIf="cotizacion.estatus === 'Pendiente'">Estamos procesando tu solicitud, te responderemos pronto.</p>
-          <p *ngIf="cotizacion.estatus === 'Respondida'">Total de presupuesto: <strong>$400</strong></p>
+          
+          <div *ngIf="cotizacion.estatus === 'Pendiente'">
+            <p>Estamos procesando tu solicitud, te responderemos pronto.</p>
+          </div>
+          
+          <div *ngIf="cotizacion.estatus === 'Respondida'" class="breakdown">
+            <h5>Detalle de costos:</h5>
+            <div class="cost-row" *ngFor="let item of cotizacion.detalleCostos">
+              <span class="cost-description">{{ item.descripcion }}</span>
+              <span class="cost-amount">${{ item.monto | number:'1.2-2' }}</span>
+            </div>
+            <div class="cost-total">
+              <span>Total:</span>
+              <span>${{ cotizacion.total | number:'1.2-2' }}</span>
+            </div>
+            <button class="accept-button" (click)="aceptarCotizacion(cotizacion)">
+              Aceptar y comprar
+            </button>
+          </div>
         </div>
       </div>
     </div>
