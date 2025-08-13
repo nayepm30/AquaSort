@@ -18,6 +18,7 @@ import { EstadisticasVentas } from './pages/estadisticasVentas/estadisticasVenta
 import { Inventario } from './pages/inventario/inventario.component';
 import { Cotizaciones } from './pages/cotizaciones/cotizaciones.component';
 import { CotizacionesPendientes } from './pages/cotizaciones-pendientes/cotizacionesPendientes.component';
+import { MiCuenta } from './pages/miCuenta/miCuenta.component';
 
 export const routes: Routes = [
   {
@@ -55,6 +56,7 @@ export const routes: Routes = [
       { path: 'misPedidos', component: MisPedidos },
       { path: 'cotizaciones', component: Cotizaciones },
       { path: 'cotizacionesPendientes', component: CotizacionesPendientes },
+      { path: 'miCuenta', component: MiCuenta },
     ]
   },
 
